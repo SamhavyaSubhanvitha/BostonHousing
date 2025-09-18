@@ -77,9 +77,9 @@ print(np.concatenate((y_pred.reshape(len(y_pred), 1), y_test.reshape(len(y_test)
 
 #Predictions
 # Find the median value and 3 samples closest to the median
-median = df['MEDV'].median()
-closest_idx = np.abs(df['MEDV'] - median).argsort()[:3]
-median_samples = df.iloc[closest_idx]
+median = dataset['MEDV'].median()
+closest_idx = np.abs(dataset['MEDV'] - median).argsort()[:3]
+median_samples = dataset.iloc[closest_idx]
 
 # Drop the target column to get only features
 X_median3 = median_samples.drop(columns=['MEDV'])
