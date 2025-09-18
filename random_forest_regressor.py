@@ -69,9 +69,6 @@ input_features = np.array([[21.2, 1000] + mean_features[2:].tolist()])
 
 print(regressor.predict(sc.transform(input_features)))
 
-import pandas as pd
-import numpy as np
-
 # Load your housing data
 df = pd.read_csv('Housing DB.csv') # Corrected filename
 
@@ -102,7 +99,6 @@ print("MAE:", mean_absolute_error(y_test, y_pred))
 print("R² Score:", r2_score(y_test, y_pred))
 
 import seaborn as sns
-import matplotlib.pyplot as plt
 
 # ---- Pick 3 samples ----
 sample_indices = [0, 1, 2]
